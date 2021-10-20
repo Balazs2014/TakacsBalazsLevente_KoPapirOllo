@@ -17,7 +17,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rock" />
+            android:src="@drawable/rock"
+            android:id="@+id/jatekosTipp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rock" />
+            android:src="@drawable/rock"
+            android:id="@+id/computerTipp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,19 +61,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="KŐ"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:id="@+id/koBtn" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PAPÍR"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:id="@+id/papirBtn" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="OLLÓ"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:id="@+id/olloBtn" />
 
     </LinearLayout>
 
