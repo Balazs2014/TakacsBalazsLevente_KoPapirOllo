@@ -1,5 +1,6 @@
 package com.example.kopapirollo;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -85,13 +86,41 @@ public class MainActivity extends AppCompatActivity {
 
     public void jatek(String computer, String jatekos) {
         if (computer.equals(jatekos)) {
-
+            Toast.makeText(MainActivity.this, "Döntetlen", Toast.LENGTH_SHORT).show();
         } else if (computer.equals("ko") && jatekos.equals("papir")) {
             Toast.makeText(MainActivity.this, "Győzelem", Toast.LENGTH_SHORT).show();
+            pontJatekos++;
         } else if (computer.equals("papir") && jatekos.equals("ollo")) {
             Toast.makeText(MainActivity.this, "Győzelem", Toast.LENGTH_SHORT).show();
+            pontJatekos++;
         } else if (computer.equals("ollo") && jatekos.equals("ko")) {
             Toast.makeText(MainActivity.this, "Győzelem", Toast.LENGTH_SHORT).show();
+            pontJatekos++;
+        } else {
+            pontComputer++;
         }
+    }
+
+    public void jatekVege() {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder();
+        alertBuilder.setCancelable(false);
+        if (pontJatekos == 3) {
+            alertBuilder.setTitle("Győzelem");
+            alertBuilder.setPositiveButton();
+        } else if (pontComputer == 3) {
+            alertBuilder.setTitle("Vereség");
+            alertBuilder.setPositiveButton();
+        }
+    }
+
+    public void kiir(int pontComputer, int pontJatekos) {
+        eredmenyText.setText("Eredmény: Ember: " + pontJatekos + " Computer: " + pontComputer);
+    }
+
+    public void ujJatek() {
+        pontJatekos = 0;
+        pontComputer = 0;
+        jatekos = "";
+        eredmenyText.setText("Eredmény: Ember: 0 Computer: 0");
     }
 }
