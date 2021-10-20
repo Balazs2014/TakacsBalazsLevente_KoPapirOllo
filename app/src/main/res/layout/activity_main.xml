@@ -6,17 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Döntetlenek száma: 0"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginBottom="15sp"
+        android:layout_marginTop="15sp"
+        android:id="@+id/dontetlenText"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
         android:id="@+id/linearKep"
-        android:layout_marginBottom="15sp">
+        android:layout_marginBottom="15sp"
+        android:layout_below="@id/dontetlenText">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/rock"
             android:id="@+id/jatekosTipp" />
 
@@ -27,8 +38,8 @@
             android:textSize="30sp" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/rock"
             android:id="@+id/computerTipp" />
 
@@ -55,7 +66,8 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_below="@id/eredmenyText"
-        android:layout_marginTop="15sp">
+        android:layout_marginTop="15sp"
+        android:id="@+id/LinearGomb">
 
         <Button
             android:layout_width="wrap_content"
